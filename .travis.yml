@@ -19,10 +19,10 @@ after_success:
     #Log in to docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     #Take those images and push them tp docker hun
-    - docker push kviev/mult-client
-    - docker push kviev/mult-nginx
-    - docker push kviev/mult-server
-    - docker push kviev/mult-worker
+    - docker push kviev/multi-client
+    - docker push kviev/multi-nginx
+    - docker push kviev/multi-server
+    - docker push kviev/multi-worker
 
 
 
