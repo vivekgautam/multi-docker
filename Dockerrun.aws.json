@@ -24,7 +24,7 @@
         },
         {
             "name": "nginx",
-            "image": "kviev/multi-ngnix",
+            "image": "kviev/multi-nginx",
             "essential": true,
             "portMappings": [
                 {
