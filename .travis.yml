@@ -11,10 +11,10 @@ script:
     - docker run -e CI=true kviev/react-test npm test
 
 after_success:
-    - docker build -t kviev/multi-client -f ./client
-    - docker build -t kviev/multi-nginx -f ./nginx
-    - docker build -t kviev/multi-server -f ./server
-    - docker build -t kviev/multi-worker -f ./worker
+    - docker build -t kviev/multi-client ./client
+    - docker build -t kviev/multi-nginx  ./nginx
+    - docker build -t kviev/multi-server ./server
+    - docker build -t kviev/multi-worker ./worker
     
     #Log in to docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
