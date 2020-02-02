@@ -24,5 +24,16 @@ after_success:
     - docker push kviev/multi-server
     - docker push kviev/multi-worker
 
-
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: us-west-2
+    app: multi-docker
+    env: MultiDocker-env-1
+    bucket_name: elasticbeanstalk-us-west-2-159382419913
+    bucket_path: docker-multi
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY 
 
